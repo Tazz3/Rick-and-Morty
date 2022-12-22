@@ -1,0 +1,17 @@
+<div class="input-group mb-3">
+  <input
+    type="number"
+    class="form-control"
+    placeholder="Episode Number"
+    aria-label="episode-number"
+    aria-describedby="basic-addon2"
+    [(ngModel)]="episodeNumb"
+  />
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" (click)="showEp()">
+      Show the Episode
+    </button>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

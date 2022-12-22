@@ -1,0 +1,58 @@
+<div class="filter container">
+  <div class="col-sm-12 col-lg-11 m-auto">
+    <h1>All Rick And Morty Characters</h1>
+    <input
+      type="text"
+      class="form-control mb-3"
+      id="characterName"
+      placeholder="Name"
+      [(ngModel)]="curNames"
+      (change)="showIt()"
+    />
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      [(ngModel)]="gend"
+      (change)="gender()"
+    >
+      <option value="all" selected>all</option>
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
+    </select>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row p-0 col-lg-11 m-auto mt-5 justify-content-between">
+    <div
+      *ngFor="let i of genderArr; let ind = index"
+      class="card cards mt-3"
+      style="width: 18rem"
+    >
+      <img [src]="i.image" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ i.name }}</h5>
+        <p class="card-text">
+          {{ i.location.name }}
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ i.species }}</li>
+        <li class="list-group-item">
+          {{ i.gender }}
+        </li>
+        <li class="list-group-item">
+          {{ i.status }}
+        </li>
+      </ul>
+      <div class="card-body">
+        <button
+          [routerLink]="['/character', i.name, i.status]"
+          class="fs-5 card-link text-white rounded-2 bg-dark"
+        >
+          Show All Alters
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

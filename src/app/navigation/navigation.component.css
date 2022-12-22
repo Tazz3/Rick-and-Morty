@@ -1,0 +1,21 @@
+nav {
+  background-color: #383b3d;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+nav a {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 900px) {
+  nav img {
+    width: 60px;
+  }
+  nav {
+    height: 10vh;
+  }
+}

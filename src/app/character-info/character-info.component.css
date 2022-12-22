@@ -1,0 +1,22 @@
+.cardss {
+  padding: 0 !important;
+}
+
+.cardss button {
+  width: 100% !important;
+  height: 50px !important;
+}
+
+/* slider */
+.carousel-inner img {
+  height: 50vh;
+  width: 90vw;
+  margin: auto;
+}
+@media screen and (min-width: 900px) {
+  .carousel-inner img {
+    height: 100vh;
+    width: 70vw;
+    margin: auto;
+  }
+}

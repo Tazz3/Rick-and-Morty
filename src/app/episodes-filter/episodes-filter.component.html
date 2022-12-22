@@ -1,0 +1,16 @@
+<div class="card text-center">
+  <div class="card-header">{{ episodeCard.episode }}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{ episodeCard.name }}</h5>
+    <p class="card-text">
+      {{ episodeCard.air_date }}
+    </p>
+    <a
+      href="#"
+      class="btn btn-primary"
+      (click)="characterShow()"
+      routerLink="/characters-in-episodes"
+      >See all characters from the episode</a
+    >
+  </div>
+</div>

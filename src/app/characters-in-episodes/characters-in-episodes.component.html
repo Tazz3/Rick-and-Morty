@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row p-0 col-lg-11 m-auto mt-5 justify-content-between">
+    <div
+      *ngFor="let i of chars; let ind = index"
+      class="card cards mt-3"
+      style="width: 18rem"
+    >
+      <img [src]="i.image" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ i.name }}</h5>
+        <p class="card-text">
+          {{ i.location.name }}
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ i.species }}</li>
+        <li class="list-group-item">
+          {{ i.gender }}
+        </li>
+        <li class="list-group-item">
+          {{ i.status }}
+        </li>
+      </ul>
+      <div class="card-body"></div>
+    </div>
+  </div>
+</div>
